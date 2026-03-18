@@ -3,12 +3,12 @@ import Link from "next/link"
 import { Instagram, Linkedin, Youtube, Facebook, Phone, Mail, MapPin } from "lucide-react"
 
 const quickLinks = [
-  { name: "Home", href: "#" },
-  { name: "About Us", href: "#" },
-  { name: "Success Stories", href: "#" },
-  { name: "Incubation center", href: "#" },
-  { name: "Business Suchna", href: "#" },
-  { name: "Contact Us", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about-us" },
+  { name: "Success Stories", href: "/success-stories" },
+  { name: "Incubation center", href: "/incubation" },
+  { name: "Business Suchna", href: "/blogs" },
+  { name: "Contact Us", href: "/contact" },
 ]
 
 const getInTouch = [

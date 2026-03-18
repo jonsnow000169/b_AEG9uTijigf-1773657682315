@@ -6,13 +6,13 @@ import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
 const leftNav = [
-  { label: "About Us", href: "#about" },
-  { label: "Events", href: "#updates" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Events", href: "/events" },
 ]
 
 const rightNav = [
-  { label: "incubation", href: "#services" },
-  { label: "Blogs", href: "#contact" },
+  { label: "Incubation", href: "/incubation" },
+  { label: "Blogs", href: "/blogs" },
 ]
 
 export function Header() {
@@ -33,7 +33,7 @@ export function Header() {
           ))}
         </div>
 
-        <Link href="#home" className="flex items-center justify-center">
+        <Link href="/" className="flex items-center justify-center">
           <Image
             src="/images/logo.gif"
             alt="Vyapaar Vani Logo"

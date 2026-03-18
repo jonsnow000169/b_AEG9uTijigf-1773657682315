@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 export function WhatIsSection() {
@@ -19,10 +20,13 @@ export function WhatIsSection() {
           We Believe That The Right Information Is The Foundation Of Successful Business, Which Is Why Every Piece Of Content We Share Is Well-Researched, Practical, And Trustworthy. On Vyapaar Vani, You'll Find Business News, Expert Insights, Podcasts, Interviews, And Inspiring Success Stories — All In One Place
         </p>
         
-        <button className="inline-flex items-center gap-2 bg-[#2ba4c3] text-white px-8 py-3 rounded-full hover:bg-[#238ba6] transition-colors shadow-lg mb-10">
+        <Link 
+          href="/about-us"
+          className="inline-flex items-center gap-2 bg-[#2ba4c3] text-white px-8 py-3 rounded-full hover:bg-[#238ba6] transition-colors shadow-lg mb-10"
+        >
           Learn More
           <ArrowRight className="w-4 h-4" />
-        </button>
+        </Link>
       </div>
 
       {/* Torn paper edge transition */}

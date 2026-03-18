@@ -1,0 +1,5 @@
+export { AboutHeroSection } from "./about-hero-section"
+export { AboutServicesSection } from "./about-services-section"
+export { AboutMSMESection } from "./about-msme-section"
+export { AboutMissionSection } from "./about-mission-section"
+export { AboutPartnersSection } from "./about-partners-section"
