@@ -72,10 +72,10 @@ const blogData: BlogDetailData = {
   heroImage: "/images/blog-team-photo.jpg",
   tableOfContents: [
     { id: "introduction", label: "Introduction" },
-    { id: "why-registration", label: "Why Business Registration Matters" },
+    { id: "about", label: "About" },
     { id: "key-features", label: "Key Features" },
     { id: "how-to-apply", label: "How To Apply" },
-    { id: "benefits", label: "Benefits" },
+    { id: "deadline", label: "Deadline" },
     { id: "conclusion", label: "Conclusion" },
   ],
   introduction: {
@@ -210,6 +210,7 @@ export default function BlogDetailPage() {
               width={80}
               height={80}
               className="rounded-full"
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
 
@@ -241,46 +242,55 @@ export default function BlogDetailPage() {
           <div className="flex flex-col lg:flex-row gap-8">
             
             {/* Sidebar - Table of Contents */}
-            <aside className="lg:w-72 flex-shrink-0">
+            <aside className="lg:w-80 flex-shrink-0">
               <div className="sticky top-24">
                 {/* TOC Card */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 mb-6 relative">
-                  {/* Tape decoration */}
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-[#F5D5A8] opacity-80 rounded-sm transform -rotate-2"></div>
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                  {/* Elephant Icon */}
+                  <div className="flex justify-center -mt-12 mb-4">
+                    <svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 35C5 20 15 5 40 5C65 5 75 20 75 35V45C75 50 72 55 67 55H60V65H50V55H30V65H20V55H13C8 55 5 50 5 45V35Z" fill="#2BA4C3"/>
+                      <rect x="25" y="55" width="8" height="10" fill="#2BA4C3"/>
+                      <rect x="47" y="55" width="8" height="10" fill="#2BA4C3"/>
+                      <rect x="32" y="60" width="16" height="5" fill="#FFFDF4"/>
+                      <rect x="37" y="62" width="6" height="3" fill="#FFFDF4"/>
+                    </svg>
+                  </div>
                   
-                  <h3 className="text-lg font-semibold mb-4">
+                  <h3 className="text-xl font-semibold mb-4 text-center">
                     Table of <span className="text-orange-500">Contents</span>
                   </h3>
                   
                   <TableOfContents items={data.tableOfContents} />
                 </div>
 
-                {/* Help Card */}
-                <div className="bg-white rounded-2xl shadow-lg p-6 relative">
-                  {/* Tape decoration */}
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-[#F5D5A8] opacity-80 rounded-sm transform rotate-2"></div>
-                  
-                  {/* Book Image */}
-                  <div className="flex justify-center mb-4">
+                {/* Book Image Card */}
+                <div className="bg-white rounded-2xl shadow-lg p-6 mb-4 border border-gray-100">
+                  <div className="flex justify-center">
                     <Image
                       src="/images/funding-guide-book.png"
                       alt="Funding Guide Book"
-                      width={120}
-                      height={150}
+                      width={150}
+                      height={180}
                       className="object-contain"
+                      style={{ width: 'auto', height: 'auto' }}
                     />
                   </div>
-                  
-                  <p className="text-sm text-gray-600 mb-4 text-center">
+                </div>
+
+                {/* Help Card */}
+                <div className="bg-white rounded-2xl shadow-lg p-6 border border-orange-100">
+                  <h4 className="text-lg font-semibold text-gray-900 text-center mb-3">
                     Need Help with Unsecured Business Loans?
-                  </p>
-                  <p className="text-xs text-gray-500 mb-4 text-center">
-                    Our team is here to guide you through the application process, help you understand your eligibility and connect you with the right lenders.
+                  </h4>
+                  
+                  <p className="text-sm text-gray-500 text-center mb-5">
+                    Our experts can guide you through the application process and help maximize your chances of approval.
                   </p>
                   
-                  <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-4 rounded-full text-sm font-medium flex items-center justify-center gap-2 transition-colors">
+                  <button className="w-full bg-gradient-to-r from-[#2BA4C3] to-[#1E90B0] hover:from-[#238ba6] hover:to-[#1a7a96] text-white py-3.5 px-4 rounded-full text-base font-medium flex items-center justify-center gap-2 transition-all shadow-lg">
                     Get Expert Help
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>
               </div>
@@ -301,8 +311,8 @@ export default function BlogDetailPage() {
                 )}
               </div>
 
-              {/* Why Section */}
-              <div id="why-registration" className="mb-10">
+              {/* About Section */}
+              <div id="about" className="mb-10">
                 <h3 className="text-2xl font-serif font-semibold mb-4">
                   Why <span className="text-[#2ba4c3]">Business Registration</span> Matters
                 </h3>
@@ -379,7 +389,7 @@ export default function BlogDetailPage() {
                   </div>
 
                   {/* Deadline */}
-                  <div className="mt-6 pt-4 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
+                  <div id="deadline" className="mt-6 pt-4 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
                       <Calendar className="w-5 h-5 text-orange-500" />
                       <div>
