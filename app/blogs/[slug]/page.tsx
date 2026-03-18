@@ -1,9 +1,10 @@
 import Image from "next/image"
-import { ArrowRight, Calendar, Building2, Users, Lightbulb, TrendingUp, Handshake } from "lucide-react"
+import { ArrowRight, Calendar } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ContactSection } from "@/components/contact-section"
 import { TableOfContents } from "@/components/blogs/table-of-contents"
+import { ServiceCard } from "@/components/service-card"
 
 // Disable dynamic params - only pre-generated paths are valid
 export const dynamicParams = false
@@ -148,25 +149,7 @@ const blogData: BlogDetailData = {
   }
 }
 
-// Icon component mapping
-function FeatureIcon({ type, className }: { type: string; className?: string }) {
-  switch (type) {
-    case "financial":
-      return <Building2 className={className} />
-    case "incubation":
-      return <Users className={className} />
-    case "mentorship":
-      return <Lightbulb className={className} />
-    case "investor":
-      return <TrendingUp className={className} />
-    case "branding":
-      return <Handshake className={className} />
-    case "innovation":
-      return <Users className={className} />
-    default:
-      return <Building2 className={className} />
-  }
-}
+
 
 export default function BlogDetailPage() {
   const data = blogData
@@ -210,7 +193,7 @@ export default function BlogDetailPage() {
               width={80}
               height={80}
               className="rounded-full"
-              style={{ width: '80px', height: '80px' }}
+              style={{ width: '80px', height: 'auto' }}
             />
           </div>
 
@@ -254,6 +237,7 @@ export default function BlogDetailPage() {
                       width={100}
                       height={70}
                       className="object-contain"
+                      style={{ width: '100px', height: 'auto' }}
                     />
                   </div>
                   
@@ -338,20 +322,13 @@ export default function BlogDetailPage() {
                 </p>
 
                 {/* Features Grid */}
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-8 justify-items-center">
                   {data.features.map((feature, index) => (
-                    <div key={index} className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
-                      <div className="flex items-start gap-3 mb-2">
-                        <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
-                          <FeatureIcon type={feature.icon} className="w-5 h-5 text-orange-500" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900">{feature.title}</h4>
-                          <p className="text-xs text-gray-500 mt-1">{feature.description}</p>
-                          <p className="text-xs font-medium text-[#2ba4c3] mt-2">{feature.subtitle}</p>
-                        </div>
-                      </div>
-                    </div>
+                    <ServiceCard
+                      key={index}
+                      title={feature.title}
+                      description={feature.description}
+                    />
                   ))}
                 </div>
               </div>
