@@ -209,7 +209,7 @@ export default function BlogDetailPage() {
               alt="Vyapaar Vani"
               width={80}
               height={80}
-              className="rounded-full"
+              className="rounded-full max-w-[80px] max-h-[80px]"
               style={{ width: 'auto', height: 'auto' }}
             />
           </div>
@@ -272,7 +272,7 @@ export default function BlogDetailPage() {
                       alt="Funding Guide Book"
                       width={150}
                       height={180}
-                      className="object-contain"
+                      className="object-contain max-w-[150px] max-h-[180px]"
                       style={{ width: 'auto', height: 'auto' }}
                     />
                   </div>
