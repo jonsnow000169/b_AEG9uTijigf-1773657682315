@@ -1,11 +1,27 @@
-"use client"
-
 import Image from "next/image"
-import Link from "next/link"
 import { ArrowRight, Calendar, Building2, Users, Lightbulb, TrendingUp, Handshake } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ContactSection } from "@/components/contact-section"
+import { TableOfContents } from "@/components/blogs/table-of-contents"
+
+// Disable dynamic params - only pre-generated paths are valid
+export const dynamicParams = false
+
+// Generate static params for all blog slugs
+export async function generateStaticParams() {
+  // These would come from your API/database
+  return [
+    { slug: "without-security-business-loan-complete-guide" },
+    { slug: "without-security-business-loan-complete-guide-2" },
+    { slug: "without-security-business-loan-complete-guide-3" },
+    { slug: "without-security-business-loan-complete-guide-4" },
+    { slug: "without-security-business-loan-complete-guide-5" },
+    { slug: "without-security-business-loan-complete-guide-6" },
+    { slug: "without-security-business-loan-complete-guide-7" },
+    { slug: "without-security-business-loan-complete-guide-8" },
+  ]
+}
 
 // Types for dynamic data
 interface BlogDetailData {
@@ -155,13 +171,6 @@ function FeatureIcon({ type, className }: { type: string; className?: string }) 
 export default function BlogDetailPage() {
   const data = blogData
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <main className="min-h-screen bg-[#FFFDF4]">
       <Header />
@@ -243,17 +252,7 @@ export default function BlogDetailPage() {
                     Table of <span className="text-orange-500">Contents</span>
                   </h3>
                   
-                  <nav className="space-y-2">
-                    {data.tableOfContents.map((item) => (
-                      <button
-                        key={item.id}
-                        onClick={() => scrollToSection(item.id)}
-                        className="block w-full text-left text-sm text-gray-600 hover:text-[#2ba4c3] py-1 border-b border-gray-100 last:border-0 transition-colors"
-                      >
-                        {item.label}
-                      </button>
-                    ))}
-                  </nav>
+                  <TableOfContents items={data.tableOfContents} />
                 </div>
 
                 {/* Help Card */}
