@@ -209,8 +209,8 @@ export default function BlogDetailPage() {
               alt="Vyapaar Vani"
               width={80}
               height={80}
-              className="rounded-full max-w-[80px] max-h-[80px]"
-              style={{ width: 'auto', height: 'auto' }}
+              className="rounded-full"
+              style={{ width: '80px', height: '80px' }}
             />
           </div>
 
@@ -248,13 +248,13 @@ export default function BlogDetailPage() {
                 <div className="bg-white rounded-2xl shadow-lg p-6 mb-6">
                   {/* Elephant Icon */}
                   <div className="flex justify-center -mt-12 mb-4">
-                    <svg width="80" height="70" viewBox="0 0 80 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 35C5 20 15 5 40 5C65 5 75 20 75 35V45C75 50 72 55 67 55H60V65H50V55H30V65H20V55H13C8 55 5 50 5 45V35Z" fill="#2BA4C3"/>
-                      <rect x="25" y="55" width="8" height="10" fill="#2BA4C3"/>
-                      <rect x="47" y="55" width="8" height="10" fill="#2BA4C3"/>
-                      <rect x="32" y="60" width="16" height="5" fill="#FFFDF4"/>
-                      <rect x="37" y="62" width="6" height="3" fill="#FFFDF4"/>
-                    </svg>
+                    <Image
+                      src="/images/elephant-icon.png"
+                      alt="Elephant Icon"
+                      width={100}
+                      height={70}
+                      className="object-contain"
+                    />
                   </div>
                   
                   <h3 className="text-xl font-semibold mb-4 text-center">
@@ -272,8 +272,8 @@ export default function BlogDetailPage() {
                       alt="Funding Guide Book"
                       width={150}
                       height={180}
-                      className="object-contain max-w-[150px] max-h-[180px]"
-                      style={{ width: 'auto', height: 'auto' }}
+                      className="object-contain"
+                      style={{ width: '150px', height: 'auto' }}
                     />
                   </div>
                 </div>
