@@ -23,7 +23,7 @@ const blogsData = [
   },
   {
     id: "2",
-    image: "/images/blog-minipix.jpg",
+    image: "/images/blog-mascot.jpg",
     category: "Finance",
     title: "Without Security Business Loan: A Complete Guide",
     description: "Understanding collateral-free loans and how businesses can leverage them for growth without putting assets at... risk.",
@@ -31,7 +31,7 @@ const blogsData = [
   },
   {
     id: "3",
-    image: "/images/blog-mirana-toys.jpg",
+    image: "/images/blog-alent.jpg",
     category: "Finance",
     title: "Without Security Business Loan: A Complete Guide",
     description: "Understanding collateral-free loans and how businesses can leverage them for growth without putting assets at... risk.",
@@ -39,7 +39,7 @@ const blogsData = [
   },
   {
     id: "4",
-    image: "/images/blog-project-studio.jpg",
+    image: "/images/blog-minipix.jpg",
     category: "Finance",
     title: "Without Security Business Loan: A Complete Guide",
     description: "Understanding collateral-free loans and how businesses can leverage them for growth without putting assets at... risk.",
@@ -47,7 +47,7 @@ const blogsData = [
   },
   {
     id: "5",
-    image: "/images/blog-one800.jpg",
+    image: "/images/blog-mirana-toys.jpg",
     category: "Finance",
     title: "Without Security Business Loan: A Complete Guide",
     description: "Understanding collateral-free loans and how businesses can leverage them for growth without putting assets at... risk.",
@@ -55,7 +55,7 @@ const blogsData = [
   },
   {
     id: "6",
-    image: "/images/blog-pronto.jpg",
+    image: "/images/blog-project-studio.jpg",
     category: "Finance",
     title: "Without Security Business Loan: A Complete Guide",
     description: "Understanding collateral-free loans and how businesses can leverage them for growth without putting assets at... risk.",
@@ -63,7 +63,7 @@ const blogsData = [
   },
   {
     id: "7",
-    image: "/images/blog-convanto.jpg",
+    image: "/images/blog-one800.jpg",
     category: "Finance",
     title: "Without Security Business Loan: A Complete Guide",
     description: "Understanding collateral-free loans and how businesses can leverage them for growth without putting assets at... risk.",
@@ -71,7 +71,7 @@ const blogsData = [
   },
   {
     id: "8",
-    image: "/images/blog-minipix.jpg",
+    image: "/images/blog-pronto.jpg",
     category: "Finance",
     title: "Without Security Business Loan: A Complete Guide",
     description: "Understanding collateral-free loans and how businesses can leverage them for growth without putting assets at... risk.",
